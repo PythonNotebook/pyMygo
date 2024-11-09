@@ -3,10 +3,14 @@ from typing import *
 
 def isshape(obj: Any, shape: Any) -> bool:
     """
+    Check if an object matches a given generic type expression.
 
-    :param obj:
-    :param shape:
-    :return:
+    :param obj: The object to be checked.
+    :type obj: Any
+    :param shape: The generic type expression to match against.
+    :type shape: Any
+    :return: True if the object matches the type expression, False otherwise.
+    :rtype: bool
     """
     if isinstance(obj, Tuple) and isinstance(shape, Tuple):
         for _obj, _type in zip(obj, shape):
